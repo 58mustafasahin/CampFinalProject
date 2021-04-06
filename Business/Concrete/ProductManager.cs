@@ -38,7 +38,7 @@ namespace Business.Concrete
         {
             //İş kodları
             //Yetkisi var mı?
-            if (DateTime.Now.Hour == 22)
+            if (DateTime.Now.Hour == 23)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
             }
@@ -51,7 +51,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Product>> (_productDal.GetAll(p => p.CategoryId == id));
         }
 
-        public IDataResult<Product> getById(int productId)
+        public IDataResult<Product> GetById(int productId)
         {
             return new SuccessDataResult<Product> (_productDal.Get(p=>p.ProductId == productId));
         }
