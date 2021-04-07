@@ -32,9 +32,10 @@ namespace WebAPI
             //AOP autofac i .net in ioc container ýna enjekte edecez 
             //Autofac, Ninject, CastleWindsor, StructureMap, LightInject, DryInject -->IoC Container
             //AOP 
+            //Postsharp
             services.AddControllers();
-            services.AddSingleton<IProductService, ProductManager>(); // içinde data tutumuyorsak singleton kullanýlabilir
-            services.AddSingleton<IProductDal, EfProductDal>();
+            //services.AddSingleton<IProductService, ProductManager>(); // içinde data tutumuyorsak singleton kullanýlabilir
+            //services.AddSingleton<IProductDal, EfProductDal>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
